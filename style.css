@@ -1,0 +1,15 @@
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.book-properties {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.bookName,
+.authorName {
+  width: 40%;
+}
