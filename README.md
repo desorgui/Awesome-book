@@ -1,6 +1,6 @@
 # Awesome-book
 
-> This is a project where we have to add books, to be more specific we have to add the title of the book and the name of the author, at the moment we just created the function to add and remove the book, basic styles but it will has more eventually
+> This is a project where we had to add books, to be more specific we had to add the title of the book and the name of the author, at the moment we just created the function to add and remove the book, basic styles but it will has more eventually
 
 ## Built With
 
