@@ -1,6 +1,5 @@
 const bookName = document.getElementById('bookName');
 const authorName = document.getElementById('authorName');
-const newBook = bookName + authorName;
 const addBook = document.getElementById('addBook');
 
 const book = [];
@@ -23,7 +22,7 @@ addBook.addEventListener('click', () => {
   books.appendChild(bookItem);
   const removeBook = bookItem.querySelectorAll('.remove');
 
-  removeBook.forEach(element => {
+  removeBook.forEach((element) => {
     element.addEventListener('click', () => {
       bookItem.remove();
     });
