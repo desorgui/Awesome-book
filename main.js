@@ -30,7 +30,10 @@ const bookName = document.getElementById('bookName');
 const authorName = document.getElementById('authorName');
 const addBook = document.getElementById('addBook');
 
-
+if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== undefined) {
+  BookList.setBooks(JSON.parse(localStorage.getItem('books')));
+}
+let booksContainer = BookList.getBooks();
 
 let book = [];
 const books = document.getElementById('books');
@@ -56,14 +59,17 @@ const removeBook = bookItem.querySelectorAll('.remove-book');
 removeBook.forEach((element, index) => {
   element.addEventListener('click', () => {
     BookList.removeBook(index);
-    
+    booksContainer = BookList.getBooks();
+    localStorage.setItem('books', JSON.stringify(booksContainer));  
     window.location.reload();
   });
 });
 
 addBook.addEventListener('click', () => {
   if (bookName.value && authorName.value) {
-    
+    BookList.addBook( bookName.value, authorName.value);
+    booksContainer = BookList.getBooks();
+    localStorage.setItem('books', JSON.stringify(booksContainer));
     window.location.reload();
   }
 });
