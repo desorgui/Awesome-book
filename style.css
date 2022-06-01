@@ -38,16 +38,16 @@ h2 {
 .bookItem {
   border: 0.25rem solid #000;
   background-image:
-  linear-gradient(
-    0deg,
-    #fff 25%,
-    #bbb 25%,
-    #bbb 50%,
-    #fff 50%,
-    #fff 75%,
-    #bbb 75%,
-    #bbb 100%
-  );
+    linear-gradient(
+      0deg,
+      #fff 25%,
+      #bbb 25%,
+      #bbb 50%,
+      #fff 50%,
+      #fff 75%,
+      #bbb 75%,
+      #bbb 100%
+    );
   background-size: 338px 338px;
 }
 
