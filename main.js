@@ -12,7 +12,7 @@ class Books {
   }
 
   removeBook(index) {
-   this.books.splice(index, 1);
+    this.books.splice(index, 1);
   }
 
   getBooks() {
@@ -35,7 +35,6 @@ if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== 
 }
 let booksContainer = BookList.getBooks();
 
-let book = [];
 const books = document.getElementById('books');
 
 const bookItem = document.createElement('div');
