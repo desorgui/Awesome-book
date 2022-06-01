@@ -59,14 +59,14 @@ removeBook.forEach((element, index) => {
   element.addEventListener('click', () => {
     BookList.removeBook(index);
     booksContainer = BookList.getBooks();
-    localStorage.setItem('books', JSON.stringify(booksContainer));  
+    localStorage.setItem('books', JSON.stringify(booksContainer));
     window.location.reload();
   });
 });
 
 addBook.addEventListener('click', () => {
   if (bookName.value && authorName.value) {
-    BookList.addBook( bookName.value, authorName.value);
+    BookList.addBook(bookName.value, authorName.value);
     booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
     window.location.reload();
