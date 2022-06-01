@@ -19,8 +19,7 @@ if (booksContainer.length > 0) {
     </div>
   `;
     books.appendChild(bookItem);
-  });
-}
+  });}
 else booksContainer = [];
 const removeBook = bookItem.querySelectorAll('.remove-book');
 
@@ -28,7 +27,7 @@ removeBook.forEach((element, index) => {
   element.addEventListener('click', () => {
     booksContainer.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(booksContainer));
-    location.reload();
+    window.location.reload();
   });
 });
 
@@ -36,7 +35,7 @@ addBook.addEventListener('click', () => {
   if (bookName.value && authorName.value) {
     book = [bookName.value, authorName.value];
     booksContainer.push(book);
-    localStorage.setItem("books", JSON.stringify(booksContainer));
-    location.reload();
+    localStorage.setItem('books', JSON.stringify(booksContainer));
+    window.location.reload();
   }
 });
