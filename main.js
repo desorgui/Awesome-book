@@ -27,7 +27,7 @@ const removeBook = bookItem.querySelectorAll('.remove-book');
 removeBook.forEach((element, index) => {
   element.addEventListener('click', () => {
     booksContainer.splice(index, 1);
-    localStorage.setItem("books", JSON.stringify(booksContainer));
+    localStorage.setItem('books', JSON.stringify(booksContainer));
     location.reload();
   });
 });
@@ -39,9 +39,4 @@ addBook.addEventListener('click', () => {
     localStorage.setItem("books", JSON.stringify(booksContainer));
     location.reload();
   }
-  /*
-  })*/
-
-
-  /**/
 });
