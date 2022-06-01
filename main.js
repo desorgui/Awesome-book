@@ -19,8 +19,9 @@ if (booksContainer.length > 0) {
     </div>
   `;
     books.appendChild(bookItem);
-  });}
-else booksContainer = [];
+  });
+} else booksContainer = [];
+
 const removeBook = bookItem.querySelectorAll('.remove-book');
 
 removeBook.forEach((element, index) => {
