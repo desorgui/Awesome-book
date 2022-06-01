@@ -20,18 +20,30 @@ Copy the SSH code to download all the files.
 
 ### Prerequisites
 
-Github.
-Code editor.
+- Github.
+- Code editor.
+- Git Bash
+- Node Js
 
-### Setup
+#### Setup
 
-### Install
+Open Git Bash and run
+`git clone https://github.com/desorgui/Awesome-book.git`
 
-### Usage
+#### Install
 
-### Run tests
+Run `npm install` in the folder **_Awesome-book_**
 
-### Deployment
+#### Test
+
+Run 
+`npx stylelint "**/*.{css,scss}"` to test css Linter
+`npx eslint .` to test Javascript Linter
+`npx hint .` to test html Linter
+
+#### Usage
+
+Open The folder in your file explorer then, right click on index.html and open with your browser.
 
 ## Authors
 

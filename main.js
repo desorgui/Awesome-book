@@ -1,9 +1,40 @@
+class Books {
+  constructor() {
+    this.title = '';
+    this.author = '';
+    this.books = [];
+  }
+
+  addBook(title, author) {
+    this.title = title;
+    this.author = author;
+    this.books.push([this.title, this.author]);
+  }
+
+  removeBook(index) {
+    this.books.splice(index, 1);
+  }
+
+  getBooks() {
+    return this.books;
+  }
+
+  setBooks(storage) {
+    this.books = storage;
+  }
+}
+
+const BookList = new Books();
+
 const bookName = document.getElementById('bookName');
 const authorName = document.getElementById('authorName');
 const addBook = document.getElementById('addBook');
 
-let booksContainer = localStorage.getItem('books') === null || localStorage.getItem('books') === undefined ? [] : JSON.parse(localStorage.getItem('books'));
-let book = [];
+if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== undefined) {
+  BookList.setBooks(JSON.parse(localStorage.getItem('books')));
+}
+let booksContainer = BookList.getBooks();
+
 const books = document.getElementById('books');
 
 const bookItem = document.createElement('div');
@@ -26,7 +57,8 @@ const removeBook = bookItem.querySelectorAll('.remove-book');
 
 removeBook.forEach((element, index) => {
   element.addEventListener('click', () => {
-    booksContainer.splice(index, 1);
+    BookList.removeBook(index);
+    booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
     window.location.reload();
   });
@@ -34,8 +66,8 @@ removeBook.forEach((element, index) => {
 
 addBook.addEventListener('click', () => {
   if (bookName.value && authorName.value) {
-    book = [bookName.value, authorName.value];
-    booksContainer.push(book);
+    BookList.addBook(bookName.value, authorName.value);
+    booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
     window.location.reload();
   }
