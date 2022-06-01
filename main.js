@@ -2,29 +2,51 @@ const bookName = document.getElementById('bookName');
 const authorName = document.getElementById('authorName');
 const addBook = document.getElementById('addBook');
 
-const book = [];
+let booksContainer = localStorage.getItem("books") === null || localStorage.getItem('books') === undefined ? [] : JSON.parse(localStorage.getItem('books'));
+var book = [];
 const books = document.getElementById('books');
 
-addBook.addEventListener('click', () => {
-  book.nameOfBook = bookName.value;
-  book.nameOfAuthor = authorName.value;
-  const bookItem = document.createElement('div');
-  bookItem.classList.add('bookItem');
-  bookItem.innerHTML = `
-  <div class="book-content">
-    <p>${book.nameOfBook}</p>
-    <p>${book.nameOfAuthor}</p>
-    <div class="remove-book">
-        <button type="button" class="remove">Remove</button>
-    </div>
-</div>
-`;
-  books.appendChild(bookItem);
-  const removeBook = bookItem.querySelectorAll('.remove');
 
-  removeBook.forEach((element) => {
-    element.addEventListener('click', () => {
-      bookItem.remove();
+const bookItem = document.createElement('div');
+if(booksContainer.length > 0){
+booksContainer.forEach((element) => {
+  bookItem.classList.add('bookItem');
+  bookItem.innerHTML += `
+    <div class="book-content">
+      <p>${element[0]} by ${element[1]}</p>
+      <div class="remove-book">
+          <button type="button" class="remove">Remove</button>
+      </div>
+    </div>
+  `;
+  books.appendChild(bookItem);
+});
+}
+else booksContainer = [];
+const removeBook = bookItem.querySelectorAll('.remove-book');
+
+  removeBook.forEach((element, index) => {
+    element.addEventListener('click', () => {      
+      booksContainer.splice(index, 1);
+      console.log(booksContainer);
+      console.log(localStorage);
+      localStorage.setItem("books", JSON.stringify(booksContainer));
+      location.reload();
     });
+    
   });
+
+addBook.addEventListener('click', () => {
+  if (bookName.value && authorName.value){
+  book = [bookName.value, authorName.value];  
+  booksContainer.push(book);
+  localStorage.setItem("books", JSON.stringify(booksContainer));
+  console.log(booksContainer);
+  location.reload();
+}
+/*
+})*/
+ 
+  
+  /**/
 });
