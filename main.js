@@ -18,14 +18,14 @@ if (booksContainer.length > 0) {
       </div>
     </div>
   `;
-  books.appendChild(bookItem);
+    books.appendChild(bookItem);
   });
-  }
+}
 else booksContainer = [];
 const removeBook = bookItem.querySelectorAll('.remove-book');
 
 removeBook.forEach((element, index) => {
-  element.addEventListener('click', () => {      
+  element.addEventListener('click', () => {
     booksContainer.splice(index, 1);
     localStorage.setItem("books", JSON.stringify(booksContainer));
     location.reload();
@@ -33,15 +33,15 @@ removeBook.forEach((element, index) => {
 });
 
 addBook.addEventListener('click', () => {
-  if (bookName.value && authorName.value){
-  book = [bookName.value, authorName.value];  
-  booksContainer.push(book);
-  localStorage.setItem("books", JSON.stringify(booksContainer));
-  location.reload();
-}
-/*
-})*/
- 
-  
+  if (bookName.value && authorName.value) {
+    book = [bookName.value, authorName.value];
+    booksContainer.push(book);
+    localStorage.setItem("books", JSON.stringify(booksContainer));
+    location.reload();
+  }
+  /*
+  })*/
+
+
   /**/
 });
