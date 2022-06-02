@@ -85,7 +85,7 @@ removeBook.forEach((element, index) => {
     BookList.removeBook(index);
     booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
-    windows.location.reload();
+    window.location.reload();
   });
 });
 
@@ -94,6 +94,6 @@ addBook.addEventListener('click', () => {
     BookList.addBook(bookName.value, authorName.value);
     booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
-    windows.location.reload();
+    window.location.reload();
   }
 });
