@@ -23,6 +23,10 @@ li {
   list-style: none;
 }
 
+.active {
+  color: rgb(0, 153, 255);
+}
+
 .container {
   width: 95%;
   margin: 0 auto;
