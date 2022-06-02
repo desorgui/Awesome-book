@@ -19,7 +19,7 @@ h2 {
   font-size: 1.8rem;
 }
 
-li{
+li {
   list-style: none;
 }
 
@@ -29,7 +29,7 @@ li{
   padding-bottom: 4rem;
 }
 
-.bar{
+.bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,22 +37,27 @@ li{
   padding: 0 0.3rem;
 }
 
-nav ul{
+nav ul {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
 
-ul li{
+ul li {
   border-right: 0.1rem solid #000;
   padding-right: 0.5rem;
 }
 
-ul li:last-of-type{
+.contact li {
+  list-style: disc;
   border: none;
 }
 
-.date{
+ul li:last-of-type {
+  border: none;
+}
+
+.date {
   text-align: end;
 }
 
@@ -61,12 +66,16 @@ ul li:last-of-type{
   display: none;
 }
 
-
 .book-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+}
+
+footer p {
+  padding: 0;
+  margin: 0;
 }
 
 .book-content p {
@@ -160,33 +169,23 @@ ul li:last-of-type{
   font-weight: 700;
 }
 
-.list-heading{
+.list-heading {
   font-weight: 700;
   text-align: center;
 }
 
-.contact{
+.contact {
   padding: 1.5rem 0;
 }
 
-.contact-info{
+.contact-info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.contact li{
-  list-style: disc;
-  border: none;
-}
-
-footer{
+footer {
   border: 0.2rem solid #000;
   padding: 0.3rem 0.4rem;
   margin-top: 4rem;
-}
-
-footer p{
-  padding: 0;
-  margin: 0;
 }

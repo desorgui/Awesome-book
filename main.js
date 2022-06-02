@@ -35,7 +35,6 @@ const contact = document.getElementById('contact-nav');
 const listSection = document.getElementById('books');
 const addSection = document.getElementById('add-books');
 const contactSection = document.getElementById('contact');
-const currentActive = document.querySelector('.active');
 
 list.addEventListener('click', () => {
   listSection.style.display = 'block';
@@ -44,16 +43,16 @@ list.addEventListener('click', () => {
 });
 
 addNew.addEventListener('click', () => {
-addSection.style.display = 'block';
-listSection.style.display = 'none';
-contactSection.style.display = 'none';
-})
+  addSection.style.display = 'block';
+  listSection.style.display = 'none';
+  contactSection.style.display = 'none';
+});
 
 contact.addEventListener('click', () => {
   contactSection.style.display = 'block';
   listSection.style.display = 'none';
   addSection.style.display = 'none';
-})
+});
 
 if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== undefined) {
   BookList.setBooks(JSON.parse(localStorage.getItem('books')));
@@ -62,7 +61,9 @@ let booksContainer = BookList.getBooks();
 
 const books = document.getElementById('books');
 
+
 const bookItem = document.createElement('div');
+
 if (booksContainer.length > 0) {
   booksContainer.forEach((element) => {
     bookItem.classList.add('bookItem');
@@ -85,7 +86,7 @@ removeBook.forEach((element, index) => {
     BookList.removeBook(index);
     booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
-    window.location.reload();
+    location.reload();
   });
 });
 
@@ -94,6 +95,6 @@ addBook.addEventListener('click', () => {
     BookList.addBook(bookName.value, authorName.value);
     booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
-    window.location.reload();
+    location.reload();
   }
 });
