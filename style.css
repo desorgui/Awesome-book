@@ -33,8 +33,11 @@ li {
   padding-bottom: 4rem;
 }
 
-.bar {
+.d-flex{
   display: flex;
+}
+
+.bar {
   align-items: center;
   justify-content: space-between;
   border: 0.2rem solid #000;
@@ -42,14 +45,14 @@ li {
 }
 
 nav ul {
-  display: flex;
   align-items: center;
   gap: 0.8rem;
 }
 
-ul li {
+.cursor {
   border-right: 0.1rem solid #000;
   padding-right: 0.5rem;
+  cursor: pointer;
 }
 
 .contact li {
@@ -71,7 +74,6 @@ ul li:last-of-type {
 }
 
 .book-content {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
@@ -127,7 +129,6 @@ footer p {
 }
 
 .book-properties {
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
@@ -183,7 +184,6 @@ footer p {
 }
 
 .contact-info {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }

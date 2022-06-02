@@ -14,13 +14,13 @@
 
 <body>
     <div class="container">
-        <div class="bar">
+        <div class="bar d-flex">
             <h1 class="heading">Awesome Books</h1>
             <nav>
-                <ul>
-                    <li id="list" class="active">list</li>
-                    <li id="add-new">Add new</li>
-                    <li id="contact-nav">Contact</li>
+                <ul class="d-flex">
+                    <li id="list" class="active cursor">list</li>
+                    <li id="add-new" class="cursor">Add new</li>
+                    <li id="contact-nav" class="cursor">Contact</li>
                 </ul>
             </nav>
         </div>
@@ -32,7 +32,7 @@
             <div class="border"></div>
             <h2 class="add-newbook">Add a new book</h2>
             <form>
-                <div class="book-properties">
+                <div class="book-properties d-flex">
                     <input type="text" id="bookName" placeholder="Title" class="bookName">
                     <input type="text" id="authorName" placeholder="Author" class="authorName">
                 </div>
@@ -47,7 +47,7 @@
 
     <section class="contact container" id="contact">
         <h2>Contact information</h2>
-        <div class="contact-info">
+        <div class="contact-info d-flex">
             <p>Do you have any questions or you just want to say hello? <br>You can reach out to us!</p>
             <ul>
                 <li>Our email: mail@mail.com</li>
