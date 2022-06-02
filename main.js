@@ -61,7 +61,6 @@ let booksContainer = BookList.getBooks();
 
 const books = document.getElementById('books');
 
-
 const bookItem = document.createElement('div');
 
 if (booksContainer.length > 0) {
@@ -86,7 +85,7 @@ removeBook.forEach((element, index) => {
     BookList.removeBook(index);
     booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
-    location.reload();
+    windows.location.reload();
   });
 });
 
@@ -95,6 +94,6 @@ addBook.addEventListener('click', () => {
     BookList.addBook(bookName.value, authorName.value);
     booksContainer = BookList.getBooks();
     localStorage.setItem('books', JSON.stringify(booksContainer));
-    location.reload();
+    windows.location.reload();
   }
 });
