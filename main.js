@@ -38,18 +38,21 @@ const contactSection = document.getElementById('contact');
 const currentActive = document.querySelector('.active');
 
 list.addEventListener('click', () => {
-  currentActive.classList.remove('active');
-  listSection.classList.add('active');
+  listSection.style.display = 'block';
+  addSection.style.display = 'none';
+  contactSection.style.display = 'none';
 });
 
 addNew.addEventListener('click', () => {
-  currentActive.classList.remove('active');
-  addSection.classList.add('active');
+addSection.style.display = 'block';
+listSection.style.display = 'none';
+contactSection.style.display = 'none';
 })
 
 contact.addEventListener('click', () => {
-  currentActive.classList.remove('active');
-  contactSection.classList.add('active');
+  contactSection.style.display = 'block';
+  listSection.style.display = 'none';
+  addSection.style.display = 'none';
 })
 
 if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== undefined) {

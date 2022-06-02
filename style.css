@@ -23,14 +23,6 @@ li{
   list-style: none;
 }
 
-.active {
-  display: block !important;
-}
-
-.hidden {
-  display: none !important;
-}
-
 .container {
   width: 95%;
   margin: 0 auto;
@@ -64,11 +56,11 @@ ul li:last-of-type{
   text-align: end;
 }
 
-#books,
 #contact,
 #add-books {
   display: none;
 }
+
 
 .book-content {
   display: flex;
