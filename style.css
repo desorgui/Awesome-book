@@ -8,6 +8,7 @@ h3,
 h4 {
   font-weight: 700;
   text-align: center;
+  line-height: 0;
 }
 
 h1 {
@@ -18,10 +19,41 @@ h2 {
   font-size: 1.8rem;
 }
 
+li{
+  list-style: none;
+}
+
 .container {
   width: 95%;
   margin: 0 auto;
   padding-bottom: 4rem;
+}
+
+.bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.2rem solid #000;
+  padding: 0 0.3rem;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+ul li{
+  border-right: 0.1rem solid #000;
+  padding-right: 0.5rem;
+}
+
+ul li:last-of-type{
+  border: none;
+}
+
+.date{
+  text-align: end;
 }
 
 .book-content {
@@ -120,4 +152,29 @@ h2 {
   font-family: "Kalam", cursive;
   font-size: 1rem;
   font-weight: 700;
+}
+
+.contact{
+  padding: 1.5rem 0;
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact li{
+  list-style: disc;
+  border: none;
+}
+
+footer{
+  border: 0.2rem solid #000;
+  padding: 0.3rem 0.4rem;
+}
+
+footer p{
+  padding: 0;
+  margin: 0;
 }
