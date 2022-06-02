@@ -29,6 +29,28 @@ const BookList = new Books();
 const bookName = document.getElementById('bookName');
 const authorName = document.getElementById('authorName');
 const addBook = document.getElementById('addBook');
+const list = document.getElementById('list');
+const addNew = document.getElementById('add-new');
+const contact = document.getElementById('contact-nav');
+const listSection = document.getElementById('books');
+const addSection = document.getElementById('add-books');
+const contactSection = document.getElementById('contact');
+const currentActive = document.querySelector('.active');
+
+list.addEventListener('click', () => {
+  currentActive.classList.remove('active');
+  listSection.classList.add('active');
+});
+
+addNew.addEventListener('click', () => {
+  currentActive.classList.remove('active');
+  addSection.classList.add('active');
+})
+
+contact.addEventListener('click', () => {
+  currentActive.classList.remove('active');
+  contactSection.classList.add('active');
+})
 
 if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== undefined) {
   BookList.setBooks(JSON.parse(localStorage.getItem('books')));
