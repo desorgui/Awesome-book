@@ -39,7 +39,7 @@ const contactSection = document.getElementById('contact');
 list.addEventListener('click', () => {
   listSection.style.display = 'block';
   addSection.style.display = 'none';
-  contactSection.style.display = 'none';  
+  contactSection.style.display = 'none';
   list.classList.add('active');
   addNew.classList.remove('active');
   contact.classList.remove('active');
