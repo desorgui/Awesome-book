@@ -29,6 +29,39 @@ const BookList = new Books();
 const bookName = document.getElementById('bookName');
 const authorName = document.getElementById('authorName');
 const addBook = document.getElementById('addBook');
+const list = document.getElementById('list');
+const addNew = document.getElementById('add-new');
+const contact = document.getElementById('contact-nav');
+const listSection = document.getElementById('books');
+const addSection = document.getElementById('add-books');
+const contactSection = document.getElementById('contact');
+
+list.addEventListener('click', () => {
+  listSection.style.display = 'block';
+  addSection.style.display = 'none';
+  contactSection.style.display = 'none';
+  list.classList.add('active');
+  addNew.classList.remove('active');
+  contact.classList.remove('active');
+});
+
+addNew.addEventListener('click', () => {
+  addSection.style.display = 'block';
+  listSection.style.display = 'none';
+  contactSection.style.display = 'none';
+  list.classList.remove('active');
+  addNew.classList.add('active');
+  contact.classList.remove('active');
+});
+
+contact.addEventListener('click', () => {
+  contactSection.style.display = 'block';
+  listSection.style.display = 'none';
+  addSection.style.display = 'none';
+  list.classList.remove('active');
+  addNew.classList.remove('active');
+  contact.classList.add('active');
+});
 
 if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== undefined) {
   BookList.setBooks(JSON.parse(localStorage.getItem('books')));
@@ -38,11 +71,12 @@ let booksContainer = BookList.getBooks();
 const books = document.getElementById('books');
 
 const bookItem = document.createElement('div');
+
 if (booksContainer.length > 0) {
   booksContainer.forEach((element) => {
     bookItem.classList.add('bookItem');
     bookItem.innerHTML += `
-    <div class="book-content">
+    <div class="book-content d-flex">
       <p>${element[0]} by ${element[1]}</p>
       <div class="remove-book">
           <button type="button" class="remove">Remove</button>
