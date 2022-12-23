@@ -49,12 +49,12 @@
 - [📖 About the Project](#about-project)
   - :camera: [Screenshots](#screenshots)
   - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
+    <!-- - [Tech Stack](#tech-stack) -->
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
+  - :bangbang: [Prerequisites](#prerequisites)
   <!-- - [Install](#install) -->
   - [Usage](#usage)
   <!-- - [Run tests](#run-tests) -->
@@ -64,7 +64,7 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [Presentation Video](#presentation-video)
+<!-- - [Presentation Video](#presentation-video) -->
 <!-- - [❓ FAQ](#faq) -->
 - [📝 License](#license)
 
@@ -80,7 +80,7 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+<!-- ### :space_invader: Tech Stack <a name="tech-stack"></a> -->
 
 <!-- > Describe the tech stack and include only the relevant sections that apply to your project. -->
 
@@ -109,7 +109,7 @@
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
+### :dart: Key Features <a name="key-features"></a>
 
 <!-- > Describe between 1-3 key features of the application. -->
 
@@ -136,7 +136,7 @@
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
+### :bangbang: Prerequisites <a name="prerequisites"></a>
 
 In order to run this project you need:
 
@@ -152,7 +152,7 @@ Example command:
 ```
  -->
 
-### Setup
+### Setup <a name="setup"></a>
 
 Clone this repository to your desired folder:
 
@@ -164,7 +164,7 @@ Open Git Bash and run:
   cd Awesome-book
 ```
 
-### Install
+### :gear: Install <a name="install"></a>
 
 Install this project with: 
 
@@ -175,7 +175,7 @@ Example command: -->
  npm install
 ```
 
-### Usage
+### :eyes: Usage <a name="usage"></a>
 
 To run the project, follow these steps:
 
@@ -188,7 +188,7 @@ Example command:
 ```
 --->
 
- ### Run tests
+ ### :test_tube: Run tests <a name="Test"></a>
 
 To run linters tests, run the following command:
 
@@ -269,21 +269,19 @@ If you like this project please give it a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-<!-- > Give credit to everyone who inspired your codebase. -->
-
-- [https://www.behance.net/gallery/29845175/CC-Global-Summit-2015](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
+<!-- - [https://www.behance.net/gallery/29845175/CC-Global-Summit-2015](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) -->
 
 - Special Thanks to everyone who will get time to check this code and suggest any issues.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Presentation Video <a name="presentation-video"></a>
+<!-- ## Presentation Video <a name="presentation-video"></a>
 
 - [https://www.loom.com/share/4ea18945f19749ef836f296553277cac](https://www.loom.com/share/4ea18945f19749ef836f296553277cac)
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- FAQ (optional) -->
 <!-- 
