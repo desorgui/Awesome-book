@@ -31,7 +31,7 @@
 </p>
    
 <h4>
-    <a href="https://desorgui.github.io/Awesome-book">View Demo</a>
+    <a href="http://dguishny.me/Awesome-book/">View Demo</a>
   <span> · </span>
     <a href="https://github.com/desorgui/Awesome-book">Documentation</a>
   <span> · </span>
@@ -124,7 +124,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Awesome-book Link](https://desorgui.github.io/awesome-book)
+- [Awesome-book Link](http://dguishny.me/Awesome-book/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
